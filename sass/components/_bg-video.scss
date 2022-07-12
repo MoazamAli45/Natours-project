@@ -1,0 +1,14 @@
+.bg-video{
+    position: absolute;// parent  must be relative 
+    top:0;
+    height:100%;
+    width:100%;
+    z-index:-1; // so that it will behind the text and button
+    opacity:.15;
+    overflow:hidden; // to show some side space
+    &__content{
+        height: 100%;
+        width:100%;
+        object-fit: cover;  // to cover full section(parent)
+      }
+}

@@ -1,0 +1,85 @@
+.story{
+    width:75%;
+    margin:4rem auto;
+    box-shadow:0 3rem 6rem rgba($color-black,.1);
+    background-color:rgba($color-white,.6);
+    border-radius:3px;
+    padding:6rem ;
+    padding-left: 9rem;
+    font-size:$dafault-font-size; 
+    transform:skewX(-12deg);
+    &>*{  // it will select all child
+      transform:skewX(12deg) ;  // this will not work on shape has alrady transform translate so put this property on both
+   
+    } @include respond(tab-port){
+        width:120%;
+        padding-right: 2rem;
+        
+    }
+    @include respond(phone){
+        transform:skewX(0deg);
+        
+    }
+     &__shape{
+        height: 15rem;
+        width:15rem;
+        // background-color:orangered ;
+       float:left;
+       shape-outside:circle(50% at 50%,50%);   // radius at horizontal vertical ( outside content)
+    //    -webkit-shape-outside: polygon(100% 100%, 100% 100%, 0% 0%, 68% 0%, 74% 15%, 70% 50%);
+       clip-path:circle(50% at 50% 50%);
+       transform:translateX(-3rem) skewX(12deg);
+       position: relative; // parent of story caption
+      @include respond(tab-port){
+        clip-path:circle(50% at 50% 50%);
+        -webkit-shape-outside:circle(50% at 50% 50%);
+        shape-outside:circle(50% at 50% 50%);
+      } 
+      @include respond(phone){
+        transform:translateX(-3rem) skewX(0);
+        
+    }
+
+    }
+    &__img{
+        height:100%; // to show full
+        transform: translateX(-4rem) scale(1.4);
+        backface-visibility: hidden;  // when you put animation something wrong happen 
+        transition: all .5s;
+    
+    }
+    &__text{
+        transform:skewX(12deg);
+        @include respond(phone){
+            transform: skewX(0);
+            
+        }
+    }
+    &__caption{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,20%);
+        color:$color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align:center;
+        opacity:0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+    &:hover &__caption{  // this mean when story hover then caption come
+        opacity:1;
+        transform: translate(-50%,-50%); // as in start its posuiton is 20% mean down then come up
+    
+    }
+    &:hover &__img{
+        transform: translateX(-4rem) scale(1);
+       filter: blur(3px) brightness(88%);
+    }
+   
+
+
+    }
+
+

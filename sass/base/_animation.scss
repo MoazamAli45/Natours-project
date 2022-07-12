@@ -1,0 +1,46 @@
+@keyframes intop{
+    0%{
+      transform: translateY(3rem);
+      opacity:0;
+    }
+    100%{
+        opacity:1;
+      transform: translateY(0);
+    }
+    }
+    /* Animatiion in subheading */
+@keyframes moveInright {
+    0%{
+        opacity: 0;
+        /*  to move left positive */
+        transform: translateX(10rem);
+    }
+    80%{
+         transform: translateX(1rem);
+    }
+
+   100%{
+       opacity: 1;
+       transform: translateY(0);
+   }
+   }
+   @keyframes moveInleft {
+    0%{
+        opacity: 0;
+        /*  to move right negative */
+        transform: translateX(-10rem);
+    }
+    /* To rotate */
+    /*60%{
+        transform: rotate(360deg);
+    }*/
+    80%{
+         transfdorm: translateX(-2rem);
+    }
+
+   100%{
+       opacity: 1;
+       transform: translateY(0);
+
+   }
+}
