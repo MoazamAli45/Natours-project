@@ -65,8 +65,7 @@ big-desktop
 
 /* To make responsive */
 html {
-  font-size: 62.5%;
-  /* now 1rem is 10px , 10px/16=62.5% */
+  font-size: 62.5%; /* now 1rem is 10px , 10px/16=62.5% */
 }
 @media (max-width: 75em) {
   html {
@@ -86,13 +85,11 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 3rem;
-  /* for entire page   */
+  padding: 3rem; /* for entire page   */
 }
 @media (max-width: 56.25em) {
   body {
-    padding: 0;
-    /* for entire page   */
+    padding: 0; /* for entire page   */
   }
 }
 
@@ -117,8 +114,7 @@ body {
   letter-spacing: 4rem;
   animation-name: moveInleft;
   animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /* beginning fast end slow*/
+  animation-timing-function: ease-out; /* beginning fast end slow*/
   /* animation-delay: 3s; */
   /* animation-iteration-count: 3s; */
 }
@@ -129,8 +125,7 @@ body {
   }
 }
 .heading-primary--sub {
-  display: block;
-  /* block has spacing dafault*/
+  display: block; /* block has spacing dafault*/
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.4rem;
